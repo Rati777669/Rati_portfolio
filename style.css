@@ -267,6 +267,7 @@ margin-right: 20px;
      padding:0px;
      margin-right:10%;
      background-color: white;
+     margin-bottom: 20px;
    }
    .aboutme{
      font-size: 18px;
@@ -274,19 +275,18 @@ margin-right: 20px;
      color:white;
      min-width:400px;
      max-width: 700px;
-
+     margin-bottom: 20px;
      display: flex;
      flex-direction: column;
      justify-content: space-around;
-     
-     
-     min-height: 40vh;
+     min-height: 60vh;
    }
    .aboutme p{
     font-size: 24px;
-    letter-spacing: .2;
+    letter-spacing: .15em;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: 200;
+    font-family:'poppins',sans-serif;
    }
    .profile_photo
    {
@@ -322,12 +322,12 @@ margin-right: 20px;
     background-color: white;
     color: #030200;;
    }
-   .icon_pack{
+   .small_pack{
     display: flex;
     margin:auto;
-   
-    justify-content: center;
-    width:100%;
+   flex-direction: row;
+    justify-content: space-around;
+    width:80%;
    }
    .small_icons
    {
@@ -424,19 +424,37 @@ margin-right: 20px;
     align-items: flex-start;
     justify-content: center;
     min-height: 400px;
-    min-height: 248px;
     padding: 10px;
     width:50%;
+    min-width: 480px;
     font-family: Arial, Helvetica, sans-serif;
    }
    .heading{
-    font-size: 18px;
+    font-size: 30px;
     font-weight: bold;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
    }
    .project_details p{
     margin-top: 5px;
     margin-bottom: 5px;
+    letter-spacing: .1em;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+   }
+   .skillset{
+    letter-spacing: .15em;
+   }
+   .madewith{
+    font-weight: lighter;
+    
+
+   }
+   .project_details a{
+    color:white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+   }
+   .project_details a:hover{
+     border-bottom: 2px solid orange;
    }
    #contact
    {
@@ -519,24 +537,33 @@ margin-right: 20px;
    .contact_details{
    display: flex;
    flex-direction: column;
-   justify-content: space-evenly;
-   min-height: 320px;
+   justify-content: space-around;
+   min-height: 398px;
    width:80%;
    margin:auto;
    align-items: center;
    }
    .inner{
     width:100%;
-   
+    border: none;
+    border-style: none;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 20px;
+    cursor: text;
     font-size:large;
+    font-family: Arial, Helvetica, sans-serif;
+   }
+   .inner:hover{
+    border: none;
+    border-style: none;
    }
    .btn{
-    height: 100%;
+  
     width:100%;
     background-color:#F06000;;
     color: white;
+    height:30px;
     border:1px solid #F06000;;
 
    }
