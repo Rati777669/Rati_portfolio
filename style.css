@@ -1,0 +1,531 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Rokkitt:wght@600;800&family=Ubuntu:wght@400;500;700&display=swap');
+*
+{
+     margin:0px;
+     padding:0px;
+     box-sizing: border-box;
+     text-decoration:none;
+
+}
+body,html{
+     margin:0;
+     width:100%;
+     overflow-x: hidden;
+  
+}
+/*Navbar*/
+#navbar
+{ 
+     width:100%;
+     background: black;
+     padding-right: 20%;
+     font-family:'ubuntu',sans-serif;
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-end;
+     
+}
+
+
+
+.menu{
+     display:flex;
+     flex-direction:row;
+     justify-content:flex-end;
+     align-items: center;
+    
+}
+.navlinks
+{
+     flex-direction: row;
+     color:white;
+     margin: 1vmax 3vmax;
+     cursor:pointer;
+     text-decoration: none;
+     font-weight:lighter;
+    list-style-type:none;
+     padding-bottom:15px;
+     font-size: 1.5rem;
+     border-bottom:4px solid #030200;
+     
+}
+.navlinks:hover{
+     border-bottom:4px solid orange;
+}
+.menu-btn-div{
+display: flex;
+margin-right: 20px;
+
+}
+.menu-btn
+{ display: none;
+     color:white;
+     cursor:pointer;
+     margin-top: 20px;
+    
+}
+.menu-btn[name="close"]{
+  display: none;
+}
+
+  
+  
+  /* APPLYING MEDIA QUERIES */
+  
+  @media (max-width: 768px) {
+  
+    #navbar
+    {
+         width:100%;
+         background: black;
+         padding-right: 0px;
+         font-family:'ubuntu',sans-serif;
+        display: flex;
+        flex-direction:column-reverse;
+        justify-content:flex-end;
+        align-items: flex-end;
+         position: relative;
+         padding-right: 0px;
+         margin-left: 0px;
+    }
+  .menu{
+    visibility: hidden;
+    left:100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    background-color: #030200;
+    opacity: 0;
+    transition: 1s ease;
+    pointer-events: auto;
+  
+  }
+  .menu-btn{
+
+    display: block;
+    
+  }
+  .menu-btn-div{
+    z-index: 999;
+  }
+  .active{
+    background-color: aquamarine;
+  }
+  .active .menu
+  {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    background-color: #030200;
+    visibility: visible;
+    opacity: 0.8;
+    transform: translateX(0);
+    left:0px;
+    transition: 1s ease;
+    
+  }
+  .active .menu-btn[name="close"]{
+    display: block;
+  }
+
+  .active .menu-btn[name="hamburger"]{
+    display: none;
+    
+    
+  }
+  .navlinks{
+    display: flex;
+    justify-content: center;
+     margin-bottom: 3vmax;
+     cursor:pointer;
+     text-decoration: none;
+     font-weight:lighter;
+    list-style-type:none;
+     padding-bottom:15px;
+     font-size: 1.5rem;
+     border-bottom:4px solid #030200;
+    
+  }
+
+
+ 
+}
+
+
+/*homepage*/
+#home
+{
+     height:100vh;
+     padding-bottom: 10%;
+     background-color: #030200;
+}
+.home
+{
+     display: flex;
+     flex-direction: column;
+     justify-content:flex-start;
+     gap:50%;
+     padding-left: 10%;
+     align-items:20%;
+     color: white;
+}
+.text1
+{
+  display: block;
+  
+     color:white;
+     width:400px;
+     font-size: 60px;
+     font-weight: 500;
+     font-family:'poppins',sans-serif;
+     overflow:hidden;
+     border-right: .1em solid orange; /* The typwriter cursor */
+     white-space: nowrap; /* Keeps the content on a single line */
+      /* Gives that scrolling effect as the typing happens */
+     letter-spacing: .15em; /* Adjust as needed */
+     animation: 
+     typing 2.5s steps(50, end) infinite,
+     blink-caret .8s step-end infinite;
+     margin-top: 20px;
+     margin-bottom: 20px;
+    
+}
+
+/* The typing effect */
+@keyframes typing {
+     from { width: 0 }
+     50% { width: 400px }
+     to{width:400px}
+   }
+   
+   /* The typewriter cursor effect */
+   @keyframes blink-caret {
+     from, to { border-color: transparent }
+     50% { border-color: orange; }
+     25% { border-color: orange; }
+     75%{ border-color: orange; }
+   }
+   .text2
+   {
+     font-size: 14px;
+     font-weight:bold;
+     font-family:Arial, Helvetica, sans-serif;
+     letter-spacing: .15;
+   }
+   .text3
+   {
+    font-size: 20px;
+    font-weight: 500;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    letter-spacing: .15;
+    line-height: 1.6;
+   }
+   .headings
+   {
+     font-size: 35px;
+     font-weight:400;
+     font-family:Verdana, Geneva, Tahoma, sans-serif;
+     display: inline-block;
+     margin-left: auto;
+     margin-right: auto;
+     margin-bottom: 5%;
+     border-bottom: 5px solid orange;
+     padding-bottom: 5px;
+     background-color: #030200;
+     color:white;
+   }
+   #About
+   {
+     min-height: 100vh;
+     display:flex;
+     flex-direction: column;
+     justify-content: center;
+     background-color: #030200;
+     padding: 0 5%;
+     
+   }
+   .about
+   {
+     display:flex;
+     align-items: center;
+     flex-direction: row;
+     flex-wrap: wrap;
+     justify-content: center;
+   }
+   .profile_photo{
+     display:inline-block;
+     min-width:400px;
+     min-height: 70vh;
+     padding:0px;
+     margin-right:10%;
+     background-color: white;
+   }
+   .aboutme{
+     font-size: 18px;
+     font-family: Arial, Helvetica, sans-serif;
+     color:white;
+     min-width:400px;
+     max-width: 600px;
+     display: flex;
+     flex-direction: column;
+     justify-content: space-around;
+     border: 2px solid white;
+     
+     min-height: 70vh;
+   }
+   .aboutme p{
+    font-size: 18px;
+   }
+   .profile_photo
+   {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+   }
+   .profile_photo img{
+    height:155px;
+    width:155px;
+    margin-bottom: 50px;
+    margin-top: 30px;
+    border-radius: 80%;
+   }
+   .profile_photo h2{
+    margin: 20px 5px 20px 5px;
+   }
+   .butn{
+    display: flex;
+    width:150px;
+    height:50px;
+    padding:5px;
+    justify-content: center;
+    align-items: center;
+    color:white;
+    background-color: black;
+    border:2px solid black;
+    margin-bottom: 20px;
+   }
+   .butn:hover{
+    background-color: white;
+    color: #030200;;
+   }
+   .icon_pack{
+    display: flex;
+    margin:auto;
+   
+    justify-content: center;
+    width:100%;
+   }
+   .small_icons
+   {
+    font-size: 24px;
+    color:black;
+    cursor: pointer;
+   }
+   #skills
+   {
+     min-height: 100vh;
+     display:flex;
+     flex-direction: column;
+     justify-content: center;
+     background-color: black;
+     padding: 0 5%;
+     border: 2px solid white;
+   }
+   
+   .wrapper
+   {
+     display:flex;
+     flex-direction:row;
+     max-width: 100%;
+     justify-content:center;
+     align-items: center;
+     flex-wrap: wrap;
+     text-decoration: none;
+    list-style-type:none;
+   
+     margin-top: 20px;
+    
+   }
+   .skill_list
+   {
+     display: inline-block;
+     color:white;
+     margin-bottom: 5vmax;
+     cursor:pointer;
+     width: 300px;
+     font-weight:lighter;
+    overflow: hidden;
+    padding-left: 50%;
+    padding-right: 50%;
+     font-size: 3rem;
+  
+      
+   }
+   .skill_name
+   {
+     font-size: 20px;
+     white-space: normal;
+     color: aliceblue;
+     display:inline-block;
+     
+     font-family: Verdana, Geneva, Tahoma, sans-serif;
+     
+   }
+   #projects{
+    background-color: #030200;
+    color:white;
+    min-height: 100vh;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 5%;
+    
+   }
+   .project_title
+   {
+    
+   margin-bottom: 6%;
+   flex-wrap: wrap;
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+    
+   }
+   .project_display
+   {
+    display:flex;
+    width:40vw;
+    min-width: 480px;
+    align-items: center;
+    justify-content: center;
+  
+   }
+   .project_display img{
+    border: 2px dashed white;
+    max-width: 480px;
+   }
+   .project_details
+   {
+    display: flex;
+    align-items: flex-start;
+    min-height: 400px;
+    min-height: 248px;
+    padding: 10px;
+    width:50%;
+   }
+   #contact
+   {
+    background-color: #030200;
+    color:white;
+    min-height: 100vh;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 5%;
+   
+   }
+   .main-content
+   {
+     display:flex;
+     flex-direction: row;
+     flex-wrap: wrap;
+    
+     justify-content: center;
+   }
+   .box
+   {
+    
+     min-width:480px;
+     min-height:500px;
+  
+     display:flex;
+     flex-direction: column;
+     justify-content:space-evenly;
+     align-items:space-evenly;
+    
+   }
+   .head{
+     margin:auto;
+     width:80%;
+     max-width: 480px;
+     border-bottom: 2px solid orange;
+     font-size: 25px;
+     font-family: Arial, Helvetica, sans-serif;
+     font-weight: lighter;
+     padding-bottom: 4px;
+
+   }
+   .content
+   {
+     width:80%;
+     max-width: 480px;
+     margin:auto;
+     font-size:x-large;
+   
+   }
+   .content a{
+    color:orange;
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 100;
+    
+   }
+   .social
+   {
+     display: flex;
+     margin:auto;
+    
+     justify-content: space-around;
+     width:80%;
+     
+   }
+   .icons{
+     font-size: 2.5rem;
+     color:white;
+    
+   }
+   .icons:hover{
+    color:#F06000;
+    font-size: 2.3rem;
+   }
+   .contact_details{
+   display: flex;
+   flex-direction: column;
+   justify-content: space-evenly;
+   min-height: 320px;
+   width:80%;
+   margin:auto;
+   align-items: center;
+   }
+   .inner{
+    width:100%;
+   
+    margin-left: auto;
+    margin-right: auto;
+    font-size:large;
+   }
+   .btn{
+    height: 100%;
+    width:100%;
+    background-color:#F06000;;
+    color: white;
+    border:1px solid #F06000;;
+
+   }
+   .btn:hover{
+    background-color: black;
+   }
+
