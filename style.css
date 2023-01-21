@@ -180,7 +180,7 @@ margin-right: 20px;
    .profile_photo{
      display:inline-block;
      min-width:380px;
-     min-height: 70vh;
+     min-height: 500px;
      padding:0px;
      margin-right:10%;
      background-color: white;
@@ -202,7 +202,7 @@ margin-right: 20px;
      display: flex;
      flex-direction: column;
      justify-content: space-around;
-     min-height: 60vh;
+     min-height: 400px;
    }
    .aboutme p{
     font-size: 24px;
@@ -211,10 +211,7 @@ margin-right: 20px;
     font-weight: 200;
     font-family:'poppins',sans-serif;
    }
-   .profile_photo
-   {
-   
-   }
+  
    .profile_photo img{
     height:155px;
     width:155px;
